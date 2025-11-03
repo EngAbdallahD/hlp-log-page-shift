@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APC Maintenance Shift Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1><img src="https://www.arabpotash.com/images/logo.png" alt="Arab Potash Logo" class="logo"></h1>
+        <h2>HPL - Electrical Duty Shifts </h2>
+    </header>
+
+    <div class="container">
+        
+        <div class="form-card">
+            <h3>تسجيل مهمة صيانة</h3>
+
+            <form id="task-log-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="task-date">التاريخ</label>
+                        <input type="date" id="task-date" name="task-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="shift">الوردية</label>
+                        <select id="shift" name="shift">
+                            <option value="morning">Morning Shift [cite: 17]</option>
+                            <option value="evening">Evening Shift [cite: 17]</option>
+                            <option value="night">Night shift [cite: 17]</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="equipment-id">رقم المعدة</label>
+                    <input type="text" id="equipment-id" name="equipment-id" placeholder="e.g., 130-01-011">
+                </div>
+
+                <div class="form-group">
+                    <label for="task-description">وصف المهمة</label>
+                    <textarea id="task-description" name="task-description" rows="3" placeholder="e.g., فك كوابل محرك بناء على طلب..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="status">الحالة</label>
+                        <select id="status" name="status">
+                            <option value="isolated">تم العزل [cite: 28]</option>
+                            <option value="connected">تم التوصيل [cite: 27]</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-notes">ملاحظات [cite: 29]</label>
+                        <input type="text" id="task-notes" name="task-notes">
+                    </div>
+                </div>
+
+                <button type="submit">إضافة مهمة</button>
+            </form>
+        </div>
+
+        <div class="form-card">
+            <h3>تسجيل دوام الموظفين (ورديه A) </h3>
+            
+            <form id="schedule-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="emp-name">اسم الموظف</label>
+                        <input type="text" id="emp-name" name="emp-name" placeholder="e.g., اسامه السميرات">
+                    </div>
+                    <div class="form-group">
+                        <label for="emp-status">الحالة</label>
+                        <select id="emp-status" name="emp-status">
+                            <option value="duty">دوامه</option>
+                            <option value="night-replace">بدل ليلى</option>
+                            <option value="annual-leave">مجاز سنوي</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="emp-hours">الساعات</label>
+                        <input type="text" id="emp-hours" name="emp-hours" placeholder="e.g., 06:00-14:00">
+                    </div>
+                     <div class="form-group">
+                        <label for="emp-notes">ملاحظات</label>
+                        <input type="text" id="emp-notes" name="emp-notes" placeholder="e.g., 2 مغادرة ساعه">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="overtime-hours">ساعات الاضافي</label>
+                        <input type="text" id="overtime-hours" name="overtime-hours" placeholder="e.g., 14:00-06:00">
+                    </div>
+                    <div class="form-group">
+                        <label for="overtime-notes">ملاحظات الاضافي</label>
+                        <input type="text" id="overtime-notes" name="overtime-notes" placeholder="e.g., اضافي اثناء استراحه">
+                    </div>
+                </div>
+
+                <button type="submit">إضافة دوام</button>
+            </form>
+        </div>
+
+    </div> </body>
+</html>
